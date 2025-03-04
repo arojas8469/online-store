@@ -1,3 +1,4 @@
+import React from 'react';
 import './footer.css'
 
 function Footer(){
@@ -8,4 +9,4 @@ function Footer(){
     );
 }
 
-export default App;
+export default Footer;

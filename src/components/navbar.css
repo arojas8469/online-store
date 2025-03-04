@@ -4,10 +4,11 @@
     justify-content: space-around;
     height: 60px;
     align-items: center;
+    background: skyblue;
 }
 
-a{
-    text-transform: uppercase;
+.navbar-menu a{
+
     font-size: 18px;
     color: rgb(5,56,77);
     Letter-spacing: 1px;
@@ -19,3 +20,19 @@ a:hover{
     color: red;
     
 }
+
+a:hover{
+    color: white;
+    text-decoration: underline;
+    /* text-transformation: uppercase; */
+}
+
+.navbar-menu fadeIn{
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    } 
+}
+

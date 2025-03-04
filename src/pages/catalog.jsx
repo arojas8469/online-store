@@ -1,5 +1,73 @@
+import React from 'react';
 import "./catalog.css";
-import Product from '../component/products';
+import Product from '../components/product '
+import { useEffect } from 'react';
+import DataService from '../../services/dataServices';
+
+const ProductCard = ({ name, price, oldPrice, img }) => {
+    return (
+        <div className="product-card">
+            <img src={img} alt={name} />
+            <h3>{name}</h3>
+            <p className="product-price">
+                ${price} <span className="old-price">${oldPrice}</span>
+            </p>
+            <div className="quantity-control">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+            <button className="add-to-cart">Add to Cart</button>
+        </div>,
+        
+
+        <div className="product-card">
+            <img src={img} alt={name} />
+            <h3>{name}</h3>
+            <p className="product-price">
+                ${price} <span className="old-price">${oldPrice}</span>
+            </p>
+            <div className="quantity-control">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+            <button className="add-to-cart">Add to Cart</button>
+        </div>,
+
+
+        <div className="product-card">
+            <img src={img} alt={name} />
+            <h3>{name}</h3>
+            <p className="product-price">
+                ${price} <span className="old-price">${oldPrice}</span>
+            </p>
+            <div className="quantity-control">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+            <button className="add-to-cart">Add to Cart</button>
+        </div>,
+
+        <div className="product-card">
+            <img src={img} alt={name} />
+            <h3>{name}</h3>
+            <p className="product-price">
+            ${price} <span className="old-price">${oldPrice}</span> 
+            </p>
+        <div className="quantity-control">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+        </div>
+        <button className="add-to-cart">Add to Cart</button>
+        </div>,
+    );
+};
+
+export default ProductCard;
+
 
 const catalog = [
     {
@@ -26,29 +94,32 @@ const catalog = [
 ];
 
 const categories=["fruits", "beverages", "merchandise", "dairy and eggs"];
-    handleClick = (text) => {
-        alert(`You clicked: ${fruits}`);
-    };
 
-    render(Catalog) {
-        return (
-            <div>
-                <h1>catalog</h1>
-                <button className="button" onClick={{} => this.handleClick("Handling")}>
-                    Product Catalog
-            </div>
-        )
-    }
+    
 
 function Catalog() {
+    const [allProducts, setAllproducts] = useState([]);
+
+    async function loadProducts() {
+        const data = await DataService.getProducts();
+    }
+
+
+
+
+    // use effect is executed when the component loads
+    useEffect(function(){
+        loadProducts();
+    }, []);
+    
     return(
-        <div className="catalog">
-            <h1>Check out our Liqour</h1>
-            <div className="filters">
+        <div className="catalog page">
+            <h1>Liqour</h1>
+            {/* <div className="filters">
             { catalog.map(prod => <Product data={prod}/>)}
             </div>
-            { catalog.map(prod => <button className='btn btn-small btn-success'>{cat}</button>)}
-            
+            { categories.map(cat => <button className='btn btn-small btn-success'>{cat}</button>)} */}
+            {allProducts.map(prod => <Product data={prod} />)}
         </div>
     );
 }

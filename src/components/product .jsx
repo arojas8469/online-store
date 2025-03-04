@@ -1,7 +1,28 @@
-import './pages.product.css'
-import QuantityPicker from './quantitypicker';
+import { useState, useContext } from 'react';
+import QuantityPicker from './quantityPicker';
+import DataContext from '../state/dataContext';
+import './product.css'
 
 function Product(props) {
+    const [quantity, setQuantity] = useState(1);
+    const addProductiontoCart = useContext(DataContext).addProductToCart 
+
+
+    function add () {
+
+        /**
+         * create a new object (prodForCart)
+         * should have everyothing that props.data contains
+         * and should also have quantity
+         * 
+         * send that object to the global add
+         */
+        let prodForCart = {...props.data, quantity: quantity};
+        prodForCart.quantity = quantity;// the global fn
+
+    }
+
+
     console.log("clicked");
     return(
         <div className="product">
@@ -24,7 +45,8 @@ function Product(props) {
 export default Product;
 
 /**
- *  whebn clicked, call an add function
+ *  when clicked, call an add function
  * function should create console log any message
  * 
  */
+
