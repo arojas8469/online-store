@@ -1,0 +1,41 @@
+.about {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+}
+
+.about h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about h5 {
+    font-size: 20px;
+    color: #2d557d;
+    margin-top: 15px;
+    transition: opacity 0.3 ease-in-out;
+    font-family: 'Seoge UI', sans-serif;
+}
+
+.about button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    color: #333;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.about button:hover {
+    background-color: #333;
+    color: white;
+}
+
