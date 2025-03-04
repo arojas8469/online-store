@@ -1,0 +1,27 @@
+.cart .parent {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.cart .prods{
+    flex:3
+}
+
+.cart .side-menu{
+    flex: 1;
+}
+
+.cart .prod-in-cart {
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    background-color: white;
+    margin-bottom: 12px;
+}
+
+.cart .prod-cart
+
+.cart .side-menu button {
+    margin-top: 40px;
+}
