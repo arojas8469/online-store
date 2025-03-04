@@ -2,71 +2,71 @@ import React from 'react';
 import "./catalog.css";
 import Product from '../components/product '
 import { useEffect } from 'react';
-import DataService from '../../services/dataServices';
+import DataService from '../services/dataServices';
 
-const ProductCard = ({ name, price, oldPrice, img }) => {
-    return (
-        <div className="product-card">
-            <img src={img} alt={name} />
-            <h3>{name}</h3>
-            <p className="product-price">
-                ${price} <span className="old-price">${oldPrice}</span>
-            </p>
-            <div className="quantity-control">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-            <button className="add-to-cart">Add to Cart</button>
-        </div>,
+// const ProductCard = ({ name, price, oldPrice, img }) => {
+//     return (
+//         <div className="product-card">
+//             <img src={img} alt={name} />
+//             <h3>{name}</h3>
+//             <p className="product-price">
+//                 ${price} <span className="old-price">${oldPrice}</span>
+//             </p>
+//             <div className="quantity-control">
+//                 <button>-</button>
+//                 <span>1</span>
+//                 <button>+</button>
+//             </div>
+//             <button className="add-to-cart">Add to Cart</button>
+//         </div>,
         
 
-        <div className="product-card">
-            <img src={img} alt={name} />
-            <h3>{name}</h3>
-            <p className="product-price">
-                ${price} <span className="old-price">${oldPrice}</span>
-            </p>
-            <div className="quantity-control">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-            <button className="add-to-cart">Add to Cart</button>
-        </div>,
+//         <div className="product-card">
+//             <img src={img} alt={name} />
+//             <h3>{name}</h3>
+//             <p className="product-price">
+//                 ${price} <span className="old-price">${oldPrice}</span>
+//             </p>
+//             <div className="quantity-control">
+//                 <button>-</button>
+//                 <span>1</span>
+//                 <button>+</button>
+//             </div>
+//             <button className="add-to-cart">Add to Cart</button>
+//         </div>,
 
 
-        <div className="product-card">
-            <img src={img} alt={name} />
-            <h3>{name}</h3>
-            <p className="product-price">
-                ${price} <span className="old-price">${oldPrice}</span>
-            </p>
-            <div className="quantity-control">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-            <button className="add-to-cart">Add to Cart</button>
-        </div>,
+//         <div className="product-card">
+//             <img src={img} alt={name} />
+//             <h3>{name}</h3>
+//             <p className="product-price">
+//                 ${price} <span className="old-price">${oldPrice}</span>
+//             </p>
+//             <div className="quantity-control">
+//                 <button>-</button>
+//                 <span>1</span>
+//                 <button>+</button>
+//             </div>
+//             <button className="add-to-cart">Add to Cart</button>
+//         </div>,
 
-        <div className="product-card">
-            <img src={img} alt={name} />
-            <h3>{name}</h3>
-            <p className="product-price">
-            ${price} <span className="old-price">${oldPrice}</span> 
-            </p>
-        <div className="quantity-control">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-        </div>
-        <button className="add-to-cart">Add to Cart</button>
-        </div>,
-    );
-};
+//         <div className="product-card">
+//             <img src={img} alt={name} />
+//             <h3>{name}</h3>
+//             <p className="product-price">
+//             ${price} <span className="old-price">${oldPrice}</span> 
+//             </p>
+//         <div className="quantity-control">
+//             <button>-</button>
+//             <span>1</span>
+//             <button>+</button>
+//         </div>
+//         <button className="add-to-cart">Add to Cart</button>
+//         </div>,
+//     );
+// };
 
-export default ProductCard;
+// export default ProductCard;
 
 
 const catalog = [
